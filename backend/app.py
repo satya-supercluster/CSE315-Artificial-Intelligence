@@ -27,6 +27,10 @@ def predict():
     image = Image.open(file.stream)
     prediction = recognize_digit(image, net)
     return jsonify({"predicted_digit": prediction})
+# Route to test server status
+@app.route('/', methods=['GET'])
+def test():
+    return jsonify({"message": "Server is up and running"}), 200
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -36,7 +36,7 @@ const App = () => {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://localhost:5000/predict", {
+      const response = await fetch(`${import.meta.env.VIT_SITE}/predict`, {
         method: "POST",
         body: formData,
       });
