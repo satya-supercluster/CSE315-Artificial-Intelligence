@@ -1,6 +1,6 @@
 Flask==2.2.2
 Pillow==9.3.0
-numpy==1.23.5 --index-url https://pypi.org/simple --prefer-binary
+numpy==1.23.5
 flask-cors
 setuptools
 wheel
