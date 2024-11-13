@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from PIL import Image
 import numpy as np
 from network import Network
 app = Flask(__name__)
+CORS(app)
 net = Network(size_layers=[784, 20, 10])
 net.weights_inp_hid = np.loadtxt("./data/weights_inp_hid.csv", delimiter=',')
 net.weights_hid_out = np.loadtxt("./data/weights_hid_out.csv", delimiter=',')
